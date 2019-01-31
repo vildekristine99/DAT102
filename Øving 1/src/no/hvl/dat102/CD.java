@@ -82,6 +82,8 @@ public class CD {
 	public void setPlateselskap(String plateselskap) {
 		this.plateselskap = plateselskap;
 	}
+
+	
 	
 	
 }
