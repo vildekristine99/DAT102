@@ -16,27 +16,15 @@ public class Fil {
 	public static CDarkivADT lesFraFil(String filnavn)  {
 		CDarkivADT cda = null;
 			try {
-			/*  1 - FileReader
-			 *      Klassen FileReader gjør at byte-innstrømmen blir opprettet,
-			 *      sørger videre for at bytes fra filen blir tolket riktig som tegn 
-			 *      for plattformen.
-			 */
-			  
+					  
 			FileReader ansFil = new FileReader(filnavn);
-			 			 
-            
-			/*  2 - BufferedReader
-			 *      Definerer et BufferReader-objekt som kobles til FileReader-objektet.
-			 *      Buffret innlesing. Da kan vi bruke metoden readLine() som leser en linje.		  
-			 */		 
-			 
+			 			  
 			BufferedReader innfil = new BufferedReader(ansFil);
-			// 3 - Leser den første posten som kun inneholder et heltall som er antall info-poster
-			       
+			      
 			String linje = innfil.readLine();
 			int n = Integer.parseInt(linje);
 			cda = new CDarkiv(n);
-			// 4 - Les postene, en hel post om gangen
+			
 			for (int i = 0; i < n; i++) {
 				String post = innfil.readLine();
 				String[] felt = post.split(SKILLE);
