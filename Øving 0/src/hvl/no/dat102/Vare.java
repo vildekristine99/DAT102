@@ -51,12 +51,11 @@ public class Vare {
 		String tpris = JOptionPane.showInputDialog("Skriv inn prisen på varen");
 		double pris = Double.parseDouble(tpris);
 		
-		if(pris < 0) {
-			JOptionPane.showMessageDialog(null, "Du kan ikke sette negativ pris");
-		} else {
-			Vare(varenummer, navn, pris);
-			
-		
+		while(pris < 0) {
+			String tpris2 = JOptionPane.showInputDialog("Du kan ikke sette negativ pris. Vennligst skriv inn ny pris:");
+			pris = Double.parseDouble(tpris2);
 		}
+		
+		
 	}
 }

@@ -9,6 +9,7 @@ public class Butikk {
 	public Butikk(String navn, int maks) {
 		this.navn = navn;
 		lager = new int[maks];
+		vare = new Vare[maks];
 	}
 	
 	public int finnVare(int varenr) {
@@ -45,6 +46,6 @@ public class Butikk {
 	}
 	
 	public double selgsVerdi() {
-		
+		return 1.01;
 	}
 }
